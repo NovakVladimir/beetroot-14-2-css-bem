@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css/style.css">
+    <title>Shoe</title>
+</head>
+<body>
+                    
+    <div class="big first">
+        <div class=" big second">
+            <div class="big third">
+                <div class="big fourth">
+                    <section class="outer">
+                        <img src="./images/logo.png" alt="logo" id="logo">
+                        <section class="inner">
+                            <div><img src="./images/Shoe_1.png" alt="grey_shoes" id="changeImg"></div>
+                            <div>
+                                <h1 id="bigFont">Nike SB Stefan Janoski Max</h1>
+                                <p>Unisex Skateboarding Shoe (Men's Sizing)</p>
+                                <p><img src="./images/Star.png" alt="star" id = "Star_1" onclick="changeColor(1)">
+                                <img src="./images/Star.png" alt="star" id = "Star_2" onclick="changeColor(2)">
+                                <img src="./images/Star.png" alt="star" id = "Star_3" onclick="changeColor(3)">
+                                <img src="./images/Star.png" alt="star" id = "Star_4" onclick="changeColor(4)">
+                                <img src="./images/Star.png" alt="star" id = "Star_5" onclick="changeColor(5)">
+                                </p>
+
+                               <form action="https://www.facebook.com/">
+
+                                    <select name="size"> 
+                                        <option value="name">Size</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                        <option value="46">46</option>
+                                        <option value="47">47</option>
+                                        <option value="48">48</option>
+                                    </select>
+
+                                    <select name="Quality">
+                                        <option value="name">Qty</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                    <div>
+                                        <input type="submit" value="Add to cart">
+                                    </div>
+                                </form>
+                        
+                            </div>
+                            <div>
+                                <div class="round grey" onclick="slider_grey()"></div>
+                                <div class="round white" onclick="slider_white()"></div>
+                                <div class="round blue" onclick="slider_blue()"></div>
+                                <div class="round red" onclick="slider_red()"></div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function slider_grey(){
+            document.getElementById("changeImg").setAttribute("src", "./images/Shoe_1.png");
+        }
+
+        function slider_white(){
+            document.getElementById("changeImg").setAttribute("src", "./images/Shoe_2.png");
+        }
+
+        function slider_blue(){
+            document.getElementById("changeImg").setAttribute("src", "./images/Shoe_3.png");
+        }
+
+        function slider_red(){
+            document.getElementById("changeImg").setAttribute("src", "./images/Shoe_4.png");
+        }
+
+        function changeColor(number) {
+            let firstNumber = number;
+            for(firstNumber; firstNumber > 0; firstNumber--) {
+                let nameOfId = "Star_" + firstNumber;
+                document.getElementById(nameOfId).setAttribute("src", "./images/Star_yellow.png");
+            }
+            let secondNumber = number;
+            for(secondNumber++; secondNumber < 6; secondNumber++) {
+                let secondNameOfId = "Star_" + secondNumber;
+                document.getElementById(secondNameOfId).setAttribute("src", "./images/Star.png");
+            }
+        }
+    </script>
+    
+</body>
+</html>
